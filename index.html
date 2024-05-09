@@ -7,14 +7,14 @@
     <link rel="icon" href="logo-ceub-versao-condensada.webp">
     <title>Calculadora</title>
 </head>
-<body>
+<body onload="loadFromLocalStorage()">
     <div class="fundo">
         <h1>Projeto de Programação web </h1>
         <img src="logo-ceub-versao-condensada.webp" alt="logo-ceub">
         <div class="calculadora">
             <h1>Calculadora</h1>
             <p id="resultado"></p>
-            <table>
+            <table >
                 <tr>
                     <td><button class="botao" onclick="clean()">C</button></td>
                     <td><button class="botao" onclick="back()">⌫</button></td>
@@ -45,8 +45,7 @@
                 </tr>
             </table>
         </div>
-    </div>
     <script src="script.js"></script>
-    <footer> Criado por Arthur Moura da Cunha, Diego Oliveira Macena, Thiago Eufrauso da Cunha Filho e Pedro Henrique Andrade Magalhães </footer>
+    <footer class="footer">© Criado por Arthur Moura da Cunha, Diego Oliveira Macena, Thiago Eufrauso da Cunha Filho e Pedro Henrique Andrade Magalhães</footer>
     
 </body>

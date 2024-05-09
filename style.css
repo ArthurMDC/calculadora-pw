@@ -32,7 +32,7 @@
 }
 .botao:hover{
     background-color: rgb(255, 0, 191);
-}
+} 
 #resultado{
     background-color: white;
     width: 207px;
@@ -43,3 +43,13 @@
     text-align: right;
     padding: 5px;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding: 30px;
+    }
