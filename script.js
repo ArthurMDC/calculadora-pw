@@ -38,4 +38,5 @@ function loadFromLocalStorage() {
         document.getElementById('resultado').innerHTML = resultado;
     }
 
+    
 }
