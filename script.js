@@ -1,23 +1,20 @@
 window.onload = function () {
     document.getElementById('resultado').value = '';
+    document.getElementById('resultado').innerHTML = localStorage.getItem('calc_resultados') || '';
 }
-
 function insert(num)
 {
     var numero = document.getElementById('resultado').innerHTML;
     document.getElementById('resultado').innerHTML = numero + num;
-    saveToLocalStorage();
 }
 function clean()
 {
     document.getElementById('resultado').innerHTML = "";
-    saveToLocalStorage();
 }
 function back()
 {
     var resultado = document.getElementById('resultado').innerHTML;
     document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
-    saveToLocalStorage();
 }
 function calcular() {
     var resultado = document.getElementById('resultado').innerHTML;
@@ -31,6 +28,7 @@ function calcular() {
 
             // Exibir o resultado com até 3 casas decimais
             document.getElementById('resultado').innerHTML = calcResultado;
+            localStorage.setItem('calc_resultado', calcResultado.toString());
         } catch (e) {
             document.getElementById('resultado').innerHTML = "Erro";
         }
