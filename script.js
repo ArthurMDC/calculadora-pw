@@ -36,7 +36,5 @@ function loadFromLocalStorage() {
     var resultado = localStorage.getItem('calc_resultado');
     if (resultado) {
         document.getElementById('resultado').innerHTML = resultado;
-    }
-
-    
+    } 
 }
