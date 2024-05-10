@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo-ceub-versao-condensada.webp">
-    <title>Calculadora</title>
+    <title>Calculadora </title>
 </head>
 <body onload="loadFromLocalStorage()">
     <div class="fundo">
-        <h1>Projeto de Programação web </h1>
+        <h1 style="padding: 10px;">Projeto de Programação web </h1>
         <img src="logo-ceub-versao-condensada.webp" alt="logo-ceub">
         <div class="calculadora">
             <h1>Calculadora</h1>
@@ -40,7 +40,7 @@
                     <td rowspan="2"><button class="botao-cor" style="height: 106px;" onclick="calcular()">=</button></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button class="botao-0" style="height: 50px;" onclick="insert('0')">0</button></td>
+                    <td colspan="2"><button class="botao-0" onclick="insert('0')">0</button></td>
                     <td><button class="botao" onclick="insert('.')">.</button></td>
                 </tr>
             </table>

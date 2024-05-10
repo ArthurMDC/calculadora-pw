@@ -1,3 +1,7 @@
+window.onload = function () {
+    document.getElementById('resultado').value = '';
+}
+
 function insert(num)
 {
     var numero = document.getElementById('resultado').innerHTML;
@@ -18,12 +22,23 @@ function back()
 function calcular() {
     var resultado = document.getElementById('resultado').innerHTML;
     if (resultado) {
-        document.getElementById('resultado').innerHTML = eval(resultado);
+        // Calcula o resultado usando 'eval', mas tome cuidado com a segurança ao usar eval
+        try {
+            let calcResultado = eval(resultado);
+
+            // Limitar a 3 casas decimais
+            calcResultado = parseFloat(calcResultado.toFixed(2));
+
+            // Exibir o resultado com até 3 casas decimais
+            document.getElementById('resultado').innerHTML = calcResultado;
+        } catch (e) {
+            document.getElementById('resultado').innerHTML = "Erro";
+        }
     } else {
-        document.getElementById('resultado').innerHTML = "Nenhum valor ";
+        document.getElementById('resultado').innerHTML = "Nenhum valor";
     }
-    saveToLocalStorage(); 
-} 
+    saveToLocalStorage();
+}
 
 function saveToLocalStorage() {
     var resultado = document.getElementById('resultado').innerHTML;
