@@ -48,7 +48,7 @@ function loadFromLocalStorage() {
         // Exemplo de como você pode iterar sobre o histórico e fazer algo com ele
         historicoArray.forEach(function (resultado, index) {
             console.log('Resultado ' + (index + 1) + ': ' + resultado);
-            
+            // Aqui você pode exibir o histórico na interface do usuário, se desejar
         });
     }
 }
